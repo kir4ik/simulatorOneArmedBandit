@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simulator one-armed bandit</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; outline: none; }
+
+    body, html { width: 100%; }
+
+    canvas { display: block;
+        background: radial-gradient(at top, #FEFFFF, #A7CECC);
+    }
+
+    .wrap { position: relative; display: flex; align-items: center; width: 100%; min-width: 500px; max-width: 1500px; margin: auto; border: 2rem ridge #333; }
+
+    .btn { position: absolute; display: flex; justify-content: center; align-items: center;
+        background: radial-gradient(at top, #777, #333);
+        color: #afa; border: none; border-radius: .125rem; 
+        cursor: pointer; }
+
+    .btn--start { top: 20%; font-family: serif; font-weight: bold;
+        box-shadow: 0 5px 10px #000; text-shadow: 0 5px 5px #000;
+        z-index: 10; transition: text-shadow .2s, box-shadow .4s; }
+    .btn--start:active { box-shadow: 0 1px 10px #000; text-shadow: 0 0 70px #afa; }
+
+    .cash, .bet { position: absolute; left: 5%; right: 5%; padding: 1% 4%;
+        display: flex; font: 1.5rem monospace; color: gold; background: #000; box-shadow: inset 0 -2px 30px #0ff;
+        border-radius: .125rem; border-right: 1rem solid #0f9; border-left: 1rem solid #0f9; }
+
+    .cash { top: 5%; }
+    .bet { bottom: 5%; }
+    
+    .valute { margin-left: auto; margin-right: 0.25rem; color: lime; font-family: serif; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <button class="btn btn--start">START</button>
+    <label class="cash">Cash <span class="valute">$</span><span id="cashAmount">0</span></label>
+    <label class="bet">Bet <span class="valute">$</span><span id="betAmount">0</span></label>
+    <canvas id="canva"></canvas>
+  </div>
+</body>
+
+    <script src="js/main.js"></script>
+</html>
