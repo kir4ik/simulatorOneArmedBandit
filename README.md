@@ -1,4 +1,4 @@
 # simulatorOneArmedBandit
 game one-armed bandit
 
-# [demo](https://kir4ik.github.io/simulatorOneArmedBandit.github.io/)
+# [demo](https://kir4ik.github.io/simulatorOneArmedBandit/)
